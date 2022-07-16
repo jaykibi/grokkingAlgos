@@ -51,3 +51,9 @@ while node is not None:
             parents[n] = node
     processed.append(node)
     node = find_lowest_cost_node(costs)
+
+print("costs table: ")
+print(costs)
+
+print("parents table: ")
+print(parents)
