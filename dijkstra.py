@@ -4,7 +4,7 @@ graph = {}
 graph["start"] = {}
 graph["start"]["a"] = 6
 graph["start"]["b"] = 2
-
+print("beginning:", graph["start"])
 
 graph["a"] = {}
 graph["a"]["fin"] = 1
@@ -30,15 +30,17 @@ parents["fin"] = None
 
 processed = []
 
+
 def find_lowest_cost_node(costs):
     lowest_cost = float("inf")
     lowest_cost_node = None
     for node in costs:
         cost = costs[node]
         if cost < lowest_cost and node not in processed:
-            lowest_cost = cost 
+            lowest_cost = cost
             lowest_cost_node = node
     return lowest_cost_node
+
 
 node = find_lowest_cost_node(costs)
 while node is not None:
